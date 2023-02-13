@@ -1,3 +1,6 @@
+//go:build testmemcache
+// +build testmemcache
+
 // Copyright 2014 The Macaron Authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License"): you may

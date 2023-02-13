@@ -130,7 +130,7 @@ func testProvider(opt Options) {
 		m.ServeHTTP(resp, req)
 	})
 
-	Convey("Regenrate empty session", func() {
+	Convey("Regenerate empty session", func() {
 		m := macaron.New()
 		m.Use(Sessioner(opt))
 		m.Get("/", func(ctx *macaron.Context, sess Store) {

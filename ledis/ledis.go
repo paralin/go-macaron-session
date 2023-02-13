@@ -20,8 +20,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/siddontang/ledisdb/config"
-	"github.com/siddontang/ledisdb/ledis"
+	"github.com/ledisdb/ledisdb/config"
+	"github.com/ledisdb/ledisdb/ledis"
 	"github.com/unknwon/com"
 	"gopkg.in/ini.v1"
 
@@ -123,7 +123,7 @@ func (p *LedisProvider) Init(expire int64, configs string) error {
 	}
 
 	db := 0
-	opt := new(config.Config)
+	opt := config.NewConfigDefault()
 	for k, v := range cfg.Section("").KeysHash() {
 		switch k {
 		case "data_dir":
